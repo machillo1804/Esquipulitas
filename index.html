@@ -632,64 +632,130 @@
                             </div>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="flaticon-phone-call"></i></div>
-                                <h3>¿Necesitás ayuda?</h3>
-                                <form action="index.html" method="post">
-                                    <div class="form-group">
-                                        <div class="icon"><i class="fa-solid fa-phone-flip"></i></div>
-                                        <input type="text" name="phone" placeholder="ingresa tu teléfono" required="">
-                                        <button type="submit"><i class="flaticon-right-arrow"></i></button>
-                                    </div>
-                                </form>
+                                <h3>¿Necesitás ayuda? Escríbenos ahora</h3>
+                                <p style="color:rgba(255,255,255,0.75); font-size:14px; margin-bottom:20px;">
+                                    Atención por WhatsApp · Respuesta inmediata en horario de servicio
+                                    <i class="fa-regular fa-clock"></i>&nbsp;
+                                    Lun–Vie 7:00am–4:00pm &nbsp;·&nbsp; </br> Sáb 7:00am–12:00md
+                           
+                                </p>
+                              
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 inner-column">
                         <div class="inner-content">
                             <div class="form-inner">
-                                <form action="index.html" method="post">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <i class="fa-solid fa-circle-user"></i>
-                                            <label>Nombre completo</label>
-                                            <input type="text" name="name"  required="">
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <i class="fa-solid fa-envelope"></i>
-                                            <label>Email</label>
-                                            <input type="email" name="email" required="">
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                                            <i class="fa-solid fa-calendar-check"></i>
-                                            <label>Día cita</label>
-                                            <input type="text" name="date" id="datepicker">
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                                            <i class="fa-solid fa-clock"></i>
-                                            <label>Hora</label>
-                                            <input type="text" name="time">
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <label>Tipo de servicio</label>
-                                            <div class="select-box">
-                                                <select class="selectmenu">
-                                                    <option selected="selected">Seleccione una opción</option>
-                                                    <option>Consulta General</option>
-                                                    <option>Cotizar Paquetes / Exámenes</option>
-                                                    <option>Servicio a Domicilio</option>
-                                                    <option>Diagnóstico Veterinario (SENASA)</option>
-                                                    <option>Consulta sobre Resultados/option>
-                                                    <option>Otro</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                            <button type="submit" class="theme-btn">Programar cita</button>
+                                <div class="row clearfix">
+
+                                    <!-- Título -->
+                                    <div class="col-lg-12 form-group" style="margin-bottom:6px;">
+                                        <label style="font-size:14px; font-weight:600; color:#1a1f5e;">
+                                            
+                                            ¿Qué servicio necesita?
+                                        </label>
+                                    </div>
+
+                                    <!-- Opciones -->
+                                    <div class="col-lg-6 col-md-6 col-sm-6" style="margin-bottom:8px; padding-right:5px;">
+                                        <div class="idx-option selected" id="idx-op-0" onclick="selectMotivoIdx(0,'Consulta General')">
+                                            <i class="fa-solid fa-stethoscope"></i><br>Consulta General
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="col-lg-6 col-md-6 col-sm-6" style="margin-bottom:8px; padding-left:5px;">
+                                        <div class="idx-option" id="idx-op-1" onclick="selectMotivoIdx(1,'Cotizar Paquetes / Exámenes')">
+                                            <i class="fa-solid fa-flask"></i><br>Cotizar Paquetes
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6" style="margin-bottom:8px; padding-right:5px;">
+                                        <div class="idx-option" id="idx-op-2" onclick="selectMotivoIdx(2,'Servicio a Domicilio')">
+                                            <i class="fa-solid fa-house-medical"></i><br>A Domicilio
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6" style="margin-bottom:8px; padding-left:5px;">
+                                        <div class="idx-option" id="idx-op-3" onclick="selectMotivoIdx(3,'Diagnóstico Veterinario SENASA')">
+                                            <i class="fa-solid fa-paw"></i><br>Veterinario
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6" style="margin-bottom:14px; padding-right:5px;">
+                                        <div class="idx-option" id="idx-op-4" onclick="selectMotivoIdx(4,'Consulta sobre Resultados')">
+                                            <i class="fa-solid fa-file-medical"></i><br>Resultados
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6" style="margin-bottom:14px; padding-left:5px;">
+                                        <div class="idx-option" id="idx-op-5" onclick="selectMotivoIdx(5,'Otra consulta')">
+                                            <i class="fa-solid fa-comment-dots"></i><br>Otra Consulta
+                                        </div>
+                                    </div>
+
+                                    <!-- Botones WhatsApp -->
+                                    <div class="col-lg-12 col-md-6 col-sm-6" style="margin-bottom:8px;">
+                                        <a id="idx-wa-sc"
+                                           href="https://wa.me/50661816840?text=Hola%2C%20quiero%20programar%20una%20cita%20para%3A%20Consulta%20General%20%5BWEB%5D"
+                                           target="_blank" rel="noopener noreferrer"
+                                           class="theme-btn"
+                                           style="display:flex; align-items:center; justify-content:center; gap:10px; background:#25D366; border-color:#25D366; padding:13px 16px; text-decoration:none; width:100%;">
+                                            <i class="fa-brands fa-whatsapp" style="font-size:18px; flex-shrink:0;"></i>
+                                            <span style="text-align:left; line-height:1.3;">
+                                                <strong style="display:block; font-size:13px;">Santa Cruz</strong>
+                                                <small style="font-size:11px; opacity:0.9;">6181-6840</small>
+                                            </span>
+                                        </a>
+                                    
+                                    </div>
+                                    <div class="col-lg-12 col-md-6 col-sm-6">
+                                        <a id="idx-wa-ni"
+                                           href="https://wa.me/50661552515?text=Hola%2C%20quiero%20programar%20una%20cita%20para%3A%20Consulta%20General%20%5BWEB%5D"
+                                           target="_blank" rel="noopener noreferrer"
+                                           class="theme-btn"
+                                           style="display:flex; align-items:center; justify-content:center; gap:10px; background:#25D366; border-color:#25D366; padding:13px 16px; text-decoration:none; width:100%;">
+                                            <i class="fa-brands fa-whatsapp" style="font-size:18px; flex-shrink:0;"></i>
+                                            <span style="text-align:left; line-height:1.3;">
+                                                <strong style="display:block; font-size:13px;">Nicoya</strong>
+                                                <small style="font-size:11px; opacity:0.9;">6155-2515</small>
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <style>
+                        .idx-option {
+                            display: block;
+                            padding: 10px 8px;
+                            border: 2px solid #dde4ee;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            font-size: 11px;
+                            font-weight: 500;
+                            color: #444;
+                            background: #fff;
+                            text-align: center;
+                            transition: all 0.2s ease;
+                            user-select: none;
+                            line-height: 1.3;
+                        }
+                        .idx-option i { font-size: 16px; color: #25D366; margin-bottom: 4px; }
+                        .idx-option:hover { border-color: #25D366; background: #f0fdf4; color: #1a1f5e; }
+                        .idx-option.selected { border-color: #25D366; background: #f0fdf4; color: #1a1f5e; font-weight: 600; box-shadow: 0 0 0 3px rgba(37,211,102,0.15); }
+                    </style>
+
+                    <script>
+                        function selectMotivoIdx(idx, motivo) {
+                            for (var i = 0; i < 6; i++) {
+                                var el = document.getElementById('idx-op-' + i);
+                                if (el) el.classList.remove('selected');
+                            }
+                            var sel = document.getElementById('idx-op-' + idx);
+                            if (sel) sel.classList.add('selected');
+                            var msg = encodeURIComponent('Hola, quiero programar una cita para: ' + motivo + ' [WEB]');
+                            document.getElementById('idx-wa-sc').href = 'https://wa.me/50661816840?text=' + msg;
+                            document.getElementById('idx-wa-ni').href = 'https://wa.me/50661552515?text=' + msg;
+                        }
+                    </script>
                 </div>
             </div>
         </section>
@@ -712,7 +778,13 @@
                                 <h6>Laboratorio clínico Esquipulitas</h6>
                                 <h3>Nicoya, Guanacaste</h3>
                                 <p>Frente a la Tortillería en Plaza Namifar<br /> <a href="mailto:info@labesquipulitas.com">info@labesquipulitas.com</a><br /><a href="tel:+50661552515">6155-2515</a></p>
-                                <div class="link"><a href="contact.html">Contactar <i class="flaticon-right-arrow"></i></a></div>
+                                    <div style=" gap:12px; flex-wrap:wrap;">
+                                        <a href="https://wa.me/50661552515?text=Hola%2C%20quisiera%20recibir%20informaci%C3%B3n%20del%20Laboratorio%20Esquipulitas%20%5BWEB%5D"
+                                        target="_blank" rel="noopener noreferrer"
+                                        style="display:inline-flex; align-items:center; gap:8px; background:#25D366; color:#fff; padding:12px 22px; border-radius:6px; font-weight:600; font-size:14px; text-decoration:none;">
+                                            <i class="fa-brands fa-whatsapp" style="font-size:18px;"></i> Nicoya · 6155-2515
+                                        </a>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -723,7 +795,13 @@
                                 <h6>Laboratorio clínico Esquipulitas</h6>
                                 <h3>Santa Cruz, Guanacaste.</h3>
                                 <p>Barrio Buenos Aires contiguo a panadería PPK <br /><a href="mailto:info@labesquipulitas.com">info@labesquipulitas.com</a><br /><a href="tel:+50661816840">6181-6840</a></p>
-                                <div class="link"><a href="contact.html">Contactar <i class="flaticon-right-arrow"></i></a></div>
+                                <div style=" gap:12px; flex-wrap:wrap;">
+                                        <a href="https://wa.me/50661816840?text=Hola%2C%20quisiera%20recibir%20informaci%C3%B3n%20del%20Laboratorio%20Esquipulitas%20%5BWEB%5D"
+                                        target="_blank" rel="noopener noreferrer"
+                                        style="display:inline-flex; align-items:center; gap:8px; background:#25D366; color:#fff; padding:12px 22px; border-radius:6px; font-weight:600; font-size:14px; text-decoration:none;">
+                                            <i class="fa-brands fa-whatsapp" style="font-size:18px;"></i> Santa Cruz · 6181-6840
+                                        </a>
+                                    </div>
                             </div>
                         </div>
                     </div>
